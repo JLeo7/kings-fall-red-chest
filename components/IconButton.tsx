@@ -23,7 +23,9 @@ export default function IconButton({
         isSelected ? "selected-icon-container" : ""
       }`}
     >
-      <img src={iconUrl} className="w-32 h-32" onClick={handleSetIcon} />
+      <div className='shadow-container'>
+        <img src={iconUrl} className="w-32 h-32" onClick={handleSetIcon} />
+      </div>
     </div>
   );
 }

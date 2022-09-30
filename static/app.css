@@ -1,8 +1,38 @@
-.icon-container > img {
+.icon-container > .shadow-container {
   border-radius: 50%;
   box-shadow: 0 0 25px #6dce19;
 }
 
-.selected-icon-container > img {
-  box-shadow: 0 0 35px #de7410;
+.shadow-container > img {
+  border-radius: 50%;
+}
+
+.selected-icon-container > .shadow-container {
+  animation: shadow-fire 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.selected-icon-container > .shadow-container > img {
+  animation: image-fire 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes image-fire {
+  from {
+    filter: sepia(100%) contrast(100%);
+  }
+  to {
+    filter: sepia(100%) contrast(70%)
+  }
+}
+
+@keyframes shadow-fire {
+  from {
+    box-shadow: 0 0 30px #de7410;
+  }
+  to {
+    box-shadow: 0 0 10px #de7410;
+  }
 }
